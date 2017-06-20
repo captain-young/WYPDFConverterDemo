@@ -1,0 +1,688 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1834C87A1EF9043F0092518D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1834C8791EF9043F0092518D /* main.m */; };
+		1834C87D1EF9043F0092518D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1834C87C1EF9043F0092518D /* AppDelegate.m */; };
+		1834C8801EF9043F0092518D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1834C87F1EF9043F0092518D /* ViewController.m */; };
+		1834C8831EF9043F0092518D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1834C8811EF9043F0092518D /* Main.storyboard */; };
+		1834C8851EF9043F0092518D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1834C8841EF9043F0092518D /* Assets.xcassets */; };
+		1834C8881EF9043F0092518D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1834C8861EF9043F0092518D /* LaunchScreen.storyboard */; };
+		1834C8931EF904400092518D /* WYPDFConverterOCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1834C8921EF904400092518D /* WYPDFConverterOCTests.m */; };
+		1834C89E1EF904400092518D /* WYPDFConverterOCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1834C89D1EF904400092518D /* WYPDFConverterOCUITests.m */; };
+		1834C8FF1EF917050092518D /* excel操作大全.doc in Resources */ = {isa = PBXBuildFile; fileRef = 1834C8EC1EF917050092518D /* excel操作大全.doc */; };
+		1834C9001EF917050092518D /* H5,JS资源.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1834C8ED1EF917050092518D /* H5,JS资源.txt */; };
+		1834C9011EF917050092518D /* iOS.ppt in Resources */ = {isa = PBXBuildFile; fileRef = 1834C8EE1EF917050092518D /* iOS.ppt */; };
+		1834C9021EF917050092518D /* Page.pages in Resources */ = {isa = PBXBuildFile; fileRef = 1834C8EF1EF917050092518D /* Page.pages */; };
+		1834C9031EF917050092518D /* Xcode快捷键.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1834C8F01EF917050092518D /* Xcode快捷键.rtf */; };
+		1834C9041EF917050092518D /* 华为推荐书目.xls in Resources */ = {isa = PBXBuildFile; fileRef = 1834C8F11EF917050092518D /* 华为推荐书目.xls */; };
+		1834C9051EF917050092518D /* 大话Swift 3.0（上）.key in Resources */ = {isa = PBXBuildFile; fileRef = 1834C8F21EF917050092518D /* 大话Swift 3.0（上）.key */; };
+		1834C9061EF917050092518D /* 抵押贷款.numbers in Resources */ = {isa = PBXBuildFile; fileRef = 1834C8F31EF917050092518D /* 抵押贷款.numbers */; };
+		1834C91A1EF918020092518D /* image0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1834C9111EF918020092518D /* image0.jpg */; };
+		1834C91B1EF918020092518D /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1834C9121EF918020092518D /* image1.jpg */; };
+		1834C91C1EF918020092518D /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1834C9131EF918020092518D /* image2.jpg */; };
+		1834C91D1EF918020092518D /* image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1834C9141EF918020092518D /* image3.jpg */; };
+		1834C91F1EF918020092518D /* image5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1834C9161EF918020092518D /* image5.jpg */; };
+		1834C9201EF918020092518D /* image6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1834C9171EF918020092518D /* image6.jpg */; };
+		1834C9211EF918020092518D /* image7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1834C9181EF918020092518D /* image7.jpg */; };
+		1834C9221EF918020092518D /* image8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1834C9191EF918020092518D /* image8.jpg */; };
+		1834C9261EF919470092518D /* WYPDFConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1834C9251EF919470092518D /* WYPDFConverter.m */; };
+		1834C9291EF919E60092518D /* UIWebView+WYFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1834C9281EF919E60092518D /* UIWebView+WYFile.m */; };
+		1834C93E1EF936DB0092518D /* UIViewController+ImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1834C9351EF936DB0092518D /* UIViewController+ImagePicker.m */; };
+		1834C93F1EF936DB0092518D /* WYImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1834C9381EF936DB0092518D /* WYImageViewController.m */; };
+		1834C9401EF936DB0092518D /* WYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1834C93A1EF936DB0092518D /* WYWebViewController.m */; };
+		1834C9411EF936DB0092518D /* WYImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1834C93D1EF936DB0092518D /* WYImageCollectionViewCell.m */; };
+		1834C9431EF938DF0092518D /* image4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1834C9421EF938DF0092518D /* image4.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1834C88F1EF904400092518D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1834C86D1EF9043F0092518D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1834C8741EF9043F0092518D;
+			remoteInfo = WYPDFConverterOC;
+		};
+		1834C89A1EF904400092518D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1834C86D1EF9043F0092518D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1834C8741EF9043F0092518D;
+			remoteInfo = WYPDFConverterOC;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1834C8751EF9043F0092518D /* WYPDFConverterOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYPDFConverterOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1834C8791EF9043F0092518D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1834C87B1EF9043F0092518D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1834C87C1EF9043F0092518D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1834C87E1EF9043F0092518D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1834C87F1EF9043F0092518D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1834C8821EF9043F0092518D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1834C8841EF9043F0092518D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1834C8871EF9043F0092518D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1834C8891EF9043F0092518D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1834C88E1EF904400092518D /* WYPDFConverterOCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WYPDFConverterOCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1834C8921EF904400092518D /* WYPDFConverterOCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYPDFConverterOCTests.m; sourceTree = "<group>"; };
+		1834C8941EF904400092518D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1834C8991EF904400092518D /* WYPDFConverterOCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WYPDFConverterOCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1834C89D1EF904400092518D /* WYPDFConverterOCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYPDFConverterOCUITests.m; sourceTree = "<group>"; };
+		1834C89F1EF904400092518D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1834C8EC1EF917050092518D /* excel操作大全.doc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "excel操作大全.doc"; sourceTree = "<group>"; };
+		1834C8ED1EF917050092518D /* H5,JS资源.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "H5,JS资源.txt"; sourceTree = "<group>"; };
+		1834C8EE1EF917050092518D /* iOS.ppt */ = {isa = PBXFileReference; lastKnownFileType = file; path = iOS.ppt; sourceTree = "<group>"; };
+		1834C8EF1EF917050092518D /* Page.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Page.pages; sourceTree = "<group>"; };
+		1834C8F01EF917050092518D /* Xcode快捷键.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "Xcode快捷键.rtf"; sourceTree = "<group>"; };
+		1834C8F11EF917050092518D /* 华为推荐书目.xls */ = {isa = PBXFileReference; lastKnownFileType = file; path = "华为推荐书目.xls"; sourceTree = "<group>"; };
+		1834C8F21EF917050092518D /* 大话Swift 3.0（上）.key */ = {isa = PBXFileReference; lastKnownFileType = file; path = "大话Swift 3.0（上）.key"; sourceTree = "<group>"; };
+		1834C8F31EF917050092518D /* 抵押贷款.numbers */ = {isa = PBXFileReference; lastKnownFileType = file; path = "抵押贷款.numbers"; sourceTree = "<group>"; };
+		1834C9111EF918020092518D /* image0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image0.jpg; sourceTree = "<group>"; };
+		1834C9121EF918020092518D /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
+		1834C9131EF918020092518D /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
+		1834C9141EF918020092518D /* image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image3.jpg; sourceTree = "<group>"; };
+		1834C9161EF918020092518D /* image5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image5.jpg; sourceTree = "<group>"; };
+		1834C9171EF918020092518D /* image6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image6.jpg; sourceTree = "<group>"; };
+		1834C9181EF918020092518D /* image7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image7.jpg; sourceTree = "<group>"; };
+		1834C9191EF918020092518D /* image8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image8.jpg; sourceTree = "<group>"; };
+		1834C9241EF919470092518D /* WYPDFConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPDFConverter.h; sourceTree = "<group>"; };
+		1834C9251EF919470092518D /* WYPDFConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPDFConverter.m; sourceTree = "<group>"; };
+		1834C9271EF919E60092518D /* UIWebView+WYFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+WYFile.h"; sourceTree = "<group>"; };
+		1834C9281EF919E60092518D /* UIWebView+WYFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+WYFile.m"; sourceTree = "<group>"; };
+		1834C9341EF936DB0092518D /* UIViewController+ImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ImagePicker.h"; sourceTree = "<group>"; };
+		1834C9351EF936DB0092518D /* UIViewController+ImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ImagePicker.m"; sourceTree = "<group>"; };
+		1834C9371EF936DB0092518D /* WYImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYImageViewController.h; sourceTree = "<group>"; };
+		1834C9381EF936DB0092518D /* WYImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYImageViewController.m; sourceTree = "<group>"; };
+		1834C9391EF936DB0092518D /* WYWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYWebViewController.h; sourceTree = "<group>"; };
+		1834C93A1EF936DB0092518D /* WYWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYWebViewController.m; sourceTree = "<group>"; };
+		1834C93C1EF936DB0092518D /* WYImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYImageCollectionViewCell.h; sourceTree = "<group>"; };
+		1834C93D1EF936DB0092518D /* WYImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYImageCollectionViewCell.m; sourceTree = "<group>"; };
+		1834C9421EF938DF0092518D /* image4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image4.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1834C8721EF9043F0092518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1834C88B1EF904400092518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1834C8961EF904400092518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1834C86C1EF9043F0092518D = {
+			isa = PBXGroup;
+			children = (
+				1834C9231EF919300092518D /* WYPDFConverter */,
+				1834C8E91EF917050092518D /* Resource */,
+				1834C8771EF9043F0092518D /* WYPDFConverterOC */,
+				1834C8911EF904400092518D /* WYPDFConverterOCTests */,
+				1834C89C1EF904400092518D /* WYPDFConverterOCUITests */,
+				1834C8761EF9043F0092518D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1834C8761EF9043F0092518D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1834C8751EF9043F0092518D /* WYPDFConverterOC.app */,
+				1834C88E1EF904400092518D /* WYPDFConverterOCTests.xctest */,
+				1834C8991EF904400092518D /* WYPDFConverterOCUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1834C8771EF9043F0092518D /* WYPDFConverterOC */ = {
+			isa = PBXGroup;
+			children = (
+				1834C87B1EF9043F0092518D /* AppDelegate.h */,
+				1834C87C1EF9043F0092518D /* AppDelegate.m */,
+				1834C87E1EF9043F0092518D /* ViewController.h */,
+				1834C87F1EF9043F0092518D /* ViewController.m */,
+				1834C9361EF936DB0092518D /* Controller */,
+				1834C93B1EF936DB0092518D /* Cell */,
+				1834C9331EF936DB0092518D /* Catagory */,
+				1834C8811EF9043F0092518D /* Main.storyboard */,
+				1834C8841EF9043F0092518D /* Assets.xcassets */,
+				1834C8861EF9043F0092518D /* LaunchScreen.storyboard */,
+				1834C8891EF9043F0092518D /* Info.plist */,
+				1834C8781EF9043F0092518D /* Supporting Files */,
+			);
+			path = WYPDFConverterOC;
+			sourceTree = "<group>";
+		};
+		1834C8781EF9043F0092518D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1834C8791EF9043F0092518D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1834C8911EF904400092518D /* WYPDFConverterOCTests */ = {
+			isa = PBXGroup;
+			children = (
+				1834C8921EF904400092518D /* WYPDFConverterOCTests.m */,
+				1834C8941EF904400092518D /* Info.plist */,
+			);
+			path = WYPDFConverterOCTests;
+			sourceTree = "<group>";
+		};
+		1834C89C1EF904400092518D /* WYPDFConverterOCUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1834C89D1EF904400092518D /* WYPDFConverterOCUITests.m */,
+				1834C89F1EF904400092518D /* Info.plist */,
+			);
+			path = WYPDFConverterOCUITests;
+			sourceTree = "<group>";
+		};
+		1834C8E91EF917050092518D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				1834C9101EF918020092518D /* image */,
+				1834C8EA1EF917050092518D /* Document */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		1834C8EA1EF917050092518D /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				1834C8EC1EF917050092518D /* excel操作大全.doc */,
+				1834C8ED1EF917050092518D /* H5,JS资源.txt */,
+				1834C8EE1EF917050092518D /* iOS.ppt */,
+				1834C8EF1EF917050092518D /* Page.pages */,
+				1834C8F01EF917050092518D /* Xcode快捷键.rtf */,
+				1834C8F11EF917050092518D /* 华为推荐书目.xls */,
+				1834C8F21EF917050092518D /* 大话Swift 3.0（上）.key */,
+				1834C8F31EF917050092518D /* 抵押贷款.numbers */,
+			);
+			path = Document;
+			sourceTree = "<group>";
+		};
+		1834C9101EF918020092518D /* image */ = {
+			isa = PBXGroup;
+			children = (
+				1834C9111EF918020092518D /* image0.jpg */,
+				1834C9121EF918020092518D /* image1.jpg */,
+				1834C9131EF918020092518D /* image2.jpg */,
+				1834C9141EF918020092518D /* image3.jpg */,
+				1834C9421EF938DF0092518D /* image4.jpg */,
+				1834C9161EF918020092518D /* image5.jpg */,
+				1834C9171EF918020092518D /* image6.jpg */,
+				1834C9181EF918020092518D /* image7.jpg */,
+				1834C9191EF918020092518D /* image8.jpg */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		1834C9231EF919300092518D /* WYPDFConverter */ = {
+			isa = PBXGroup;
+			children = (
+				1834C9241EF919470092518D /* WYPDFConverter.h */,
+				1834C9251EF919470092518D /* WYPDFConverter.m */,
+				1834C9271EF919E60092518D /* UIWebView+WYFile.h */,
+				1834C9281EF919E60092518D /* UIWebView+WYFile.m */,
+			);
+			path = WYPDFConverter;
+			sourceTree = "<group>";
+		};
+		1834C9331EF936DB0092518D /* Catagory */ = {
+			isa = PBXGroup;
+			children = (
+				1834C9341EF936DB0092518D /* UIViewController+ImagePicker.h */,
+				1834C9351EF936DB0092518D /* UIViewController+ImagePicker.m */,
+			);
+			path = Catagory;
+			sourceTree = "<group>";
+		};
+		1834C9361EF936DB0092518D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1834C9371EF936DB0092518D /* WYImageViewController.h */,
+				1834C9381EF936DB0092518D /* WYImageViewController.m */,
+				1834C9391EF936DB0092518D /* WYWebViewController.h */,
+				1834C93A1EF936DB0092518D /* WYWebViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1834C93B1EF936DB0092518D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1834C93C1EF936DB0092518D /* WYImageCollectionViewCell.h */,
+				1834C93D1EF936DB0092518D /* WYImageCollectionViewCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1834C8741EF9043F0092518D /* WYPDFConverterOC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1834C8A21EF904400092518D /* Build configuration list for PBXNativeTarget "WYPDFConverterOC" */;
+			buildPhases = (
+				1834C8711EF9043F0092518D /* Sources */,
+				1834C8721EF9043F0092518D /* Frameworks */,
+				1834C8731EF9043F0092518D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WYPDFConverterOC;
+			productName = WYPDFConverterOC;
+			productReference = 1834C8751EF9043F0092518D /* WYPDFConverterOC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1834C88D1EF904400092518D /* WYPDFConverterOCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1834C8A51EF904400092518D /* Build configuration list for PBXNativeTarget "WYPDFConverterOCTests" */;
+			buildPhases = (
+				1834C88A1EF904400092518D /* Sources */,
+				1834C88B1EF904400092518D /* Frameworks */,
+				1834C88C1EF904400092518D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1834C8901EF904400092518D /* PBXTargetDependency */,
+			);
+			name = WYPDFConverterOCTests;
+			productName = WYPDFConverterOCTests;
+			productReference = 1834C88E1EF904400092518D /* WYPDFConverterOCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1834C8981EF904400092518D /* WYPDFConverterOCUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1834C8A81EF904400092518D /* Build configuration list for PBXNativeTarget "WYPDFConverterOCUITests" */;
+			buildPhases = (
+				1834C8951EF904400092518D /* Sources */,
+				1834C8961EF904400092518D /* Frameworks */,
+				1834C8971EF904400092518D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1834C89B1EF904400092518D /* PBXTargetDependency */,
+			);
+			name = WYPDFConverterOCUITests;
+			productName = WYPDFConverterOCUITests;
+			productReference = 1834C8991EF904400092518D /* WYPDFConverterOCUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1834C86D1EF9043F0092518D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "White-Young";
+				TargetAttributes = {
+					1834C8741EF9043F0092518D = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					1834C88D1EF904400092518D = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1834C8741EF9043F0092518D;
+					};
+					1834C8981EF904400092518D = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1834C8741EF9043F0092518D;
+					};
+				};
+			};
+			buildConfigurationList = 1834C8701EF9043F0092518D /* Build configuration list for PBXProject "WYPDFConverterOC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1834C86C1EF9043F0092518D;
+			productRefGroup = 1834C8761EF9043F0092518D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1834C8741EF9043F0092518D /* WYPDFConverterOC */,
+				1834C88D1EF904400092518D /* WYPDFConverterOCTests */,
+				1834C8981EF904400092518D /* WYPDFConverterOCUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1834C8731EF9043F0092518D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1834C8881EF9043F0092518D /* LaunchScreen.storyboard in Resources */,
+				1834C91F1EF918020092518D /* image5.jpg in Resources */,
+				1834C91C1EF918020092518D /* image2.jpg in Resources */,
+				1834C8851EF9043F0092518D /* Assets.xcassets in Resources */,
+				1834C9031EF917050092518D /* Xcode快捷键.rtf in Resources */,
+				1834C9221EF918020092518D /* image8.jpg in Resources */,
+				1834C9061EF917050092518D /* 抵押贷款.numbers in Resources */,
+				1834C91A1EF918020092518D /* image0.jpg in Resources */,
+				1834C9001EF917050092518D /* H5,JS资源.txt in Resources */,
+				1834C91B1EF918020092518D /* image1.jpg in Resources */,
+				1834C9211EF918020092518D /* image7.jpg in Resources */,
+				1834C8FF1EF917050092518D /* excel操作大全.doc in Resources */,
+				1834C9201EF918020092518D /* image6.jpg in Resources */,
+				1834C9021EF917050092518D /* Page.pages in Resources */,
+				1834C9011EF917050092518D /* iOS.ppt in Resources */,
+				1834C9051EF917050092518D /* 大话Swift 3.0（上）.key in Resources */,
+				1834C9431EF938DF0092518D /* image4.jpg in Resources */,
+				1834C8831EF9043F0092518D /* Main.storyboard in Resources */,
+				1834C9041EF917050092518D /* 华为推荐书目.xls in Resources */,
+				1834C91D1EF918020092518D /* image3.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1834C88C1EF904400092518D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1834C8971EF904400092518D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1834C8711EF9043F0092518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1834C93E1EF936DB0092518D /* UIViewController+ImagePicker.m in Sources */,
+				1834C8801EF9043F0092518D /* ViewController.m in Sources */,
+				1834C87D1EF9043F0092518D /* AppDelegate.m in Sources */,
+				1834C9291EF919E60092518D /* UIWebView+WYFile.m in Sources */,
+				1834C93F1EF936DB0092518D /* WYImageViewController.m in Sources */,
+				1834C9401EF936DB0092518D /* WYWebViewController.m in Sources */,
+				1834C9411EF936DB0092518D /* WYImageCollectionViewCell.m in Sources */,
+				1834C9261EF919470092518D /* WYPDFConverter.m in Sources */,
+				1834C87A1EF9043F0092518D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1834C88A1EF904400092518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1834C8931EF904400092518D /* WYPDFConverterOCTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1834C8951EF904400092518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1834C89E1EF904400092518D /* WYPDFConverterOCUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1834C8901EF904400092518D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1834C8741EF9043F0092518D /* WYPDFConverterOC */;
+			targetProxy = 1834C88F1EF904400092518D /* PBXContainerItemProxy */;
+		};
+		1834C89B1EF904400092518D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1834C8741EF9043F0092518D /* WYPDFConverterOC */;
+			targetProxy = 1834C89A1EF904400092518D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1834C8811EF9043F0092518D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1834C8821EF9043F0092518D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1834C8861EF9043F0092518D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1834C8871EF9043F0092518D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1834C8A01EF904400092518D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1834C8A11EF904400092518D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1834C8A31EF904400092518D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WYPDFConverterOC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = WhiteYoung.WYPDFConverterOC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1834C8A41EF904400092518D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WYPDFConverterOC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = WhiteYoung.WYPDFConverterOC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1834C8A61EF904400092518D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WYPDFConverterOCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = WhiteYoung.WYPDFConverterOCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WYPDFConverterOC.app/WYPDFConverterOC";
+			};
+			name = Debug;
+		};
+		1834C8A71EF904400092518D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WYPDFConverterOCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = WhiteYoung.WYPDFConverterOCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WYPDFConverterOC.app/WYPDFConverterOC";
+			};
+			name = Release;
+		};
+		1834C8A91EF904400092518D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WYPDFConverterOCUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = WhiteYoung.WYPDFConverterOCUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WYPDFConverterOC;
+			};
+			name = Debug;
+		};
+		1834C8AA1EF904400092518D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WYPDFConverterOCUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = WhiteYoung.WYPDFConverterOCUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WYPDFConverterOC;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1834C8701EF9043F0092518D /* Build configuration list for PBXProject "WYPDFConverterOC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1834C8A01EF904400092518D /* Debug */,
+				1834C8A11EF904400092518D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1834C8A21EF904400092518D /* Build configuration list for PBXNativeTarget "WYPDFConverterOC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1834C8A31EF904400092518D /* Debug */,
+				1834C8A41EF904400092518D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1834C8A51EF904400092518D /* Build configuration list for PBXNativeTarget "WYPDFConverterOCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1834C8A61EF904400092518D /* Debug */,
+				1834C8A71EF904400092518D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1834C8A81EF904400092518D /* Build configuration list for PBXNativeTarget "WYPDFConverterOCUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1834C8A91EF904400092518D /* Debug */,
+				1834C8AA1EF904400092518D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1834C86D1EF9043F0092518D /* Project object */;
+}
