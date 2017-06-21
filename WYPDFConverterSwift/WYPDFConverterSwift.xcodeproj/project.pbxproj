@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18B2CE211EFA59C500315A16 /* WYPDFConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CE201EFA59C500315A16 /* WYPDFConverter.swift */; };
 		6F14D9F81EF954BF00911D47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F14D9F71EF954BF00911D47 /* AppDelegate.swift */; };
 		6F14D9FA1EF954BF00911D47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F14D9F91EF954BF00911D47 /* ViewController.swift */; };
 		6F14D9FD1EF954BF00911D47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F14D9FB1EF954BF00911D47 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18B2CE201EFA59C500315A16 /* WYPDFConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WYPDFConverter.swift; sourceTree = "<group>"; };
 		6F14D9F41EF954BF00911D47 /* WYPDFConverterSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYPDFConverterSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F14D9F71EF954BF00911D47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F14D9F91EF954BF00911D47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,9 +112,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18B2CE1F1EFA599F00315A16 /* WYPDFConverter */ = {
+			isa = PBXGroup;
+			children = (
+				18B2CE201EFA59C500315A16 /* WYPDFConverter.swift */,
+			);
+			path = WYPDFConverter;
+			sourceTree = "<group>";
+		};
 		6F14D9EB1EF954BF00911D47 = {
 			isa = PBXGroup;
 			children = (
+				18B2CE1F1EFA599F00315A16 /* WYPDFConverter */,
 				6F14DA251EF954ED00911D47 /* Resource */,
 				6F14D9F61EF954BF00911D47 /* WYPDFConverterSwift */,
 				6F14DA0B1EF954BF00911D47 /* WYPDFConverterSwiftTests */,
@@ -363,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F14D9FA1EF954BF00911D47 /* ViewController.swift in Sources */,
+				18B2CE211EFA59C500315A16 /* WYPDFConverter.swift in Sources */,
 				6F14D9F81EF954BF00911D47 /* AppDelegate.swift in Sources */,
 				6F14DA4C1EF9609B00911D47 /* WYWebViewController.swift in Sources */,
 			);
@@ -460,7 +472,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -505,7 +517,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -519,6 +531,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WYPDFConverterSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = whiteyoung.WYPDFConverterSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -531,6 +544,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WYPDFConverterSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = whiteyoung.WYPDFConverterSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -611,6 +625,7 @@
 				6F14DA1E1EF954BF00911D47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6F14DA1F1EF954BF00911D47 /* Build configuration list for PBXNativeTarget "WYPDFConverterSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -619,6 +634,7 @@
 				6F14DA211EF954BF00911D47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6F14DA221EF954BF00911D47 /* Build configuration list for PBXNativeTarget "WYPDFConverterSwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -627,6 +643,7 @@
 				6F14DA241EF954BF00911D47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

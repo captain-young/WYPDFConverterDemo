@@ -8,12 +8,12 @@
 
 import UIKit
 
-class WYWebViewController: UIViewController {
+class WYWebViewController: UIViewController ,UIDocumentInteractionControllerDelegate,UIWebViewDelegate{
 
     var webView : UIWebView!
     var filePath : String!
     var fileName : String!
-    
+    var docVc : UIDocumentInteractionController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,39 +25,44 @@ class WYWebViewController: UIViewController {
         
         webView = UIWebView.init(frame: self.view.frame)
         webView.scalesPageToFit = true
+        webView.delegate = self
         webView.loadRequest(request as URLRequest)
         self.view.addSubview(webView)
-    
+        
+        docVc = UIDocumentInteractionController.init()
+        docVc.delegate = self
+        
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "PDF转换", style: .plain, target: self, action: #selector(webView2PDF))
     }
     
     func webView2PDF() {
         
-    }
+        let result = WYPDFConverter.converterPDFWithWebView(webView,fileName: fileName + ".pdf")
     
-    func convert2PDFData() ->Data {
-        
-        
-        let format = webView.viewPrintFormatter()
-        let render = UIPrintPageRenderer.init()
-        
-        render.addPrintFormatter(format, startingAtPageAt: 0)
-        
-        render.setValue(NSValue.init(cgRect: CGRect.zero), forKey: "paperRect")
-        render.setValue(NSValue.init(cgRect: CGRect.zero), forKey: "printableRect")
-        
-        let pdfData = Data.init()
-        
-        UIGraphicsBeginPDFContextToData(pdfData as! NSMutableData, CGRect.zero, nil)
-        
-        for i in 0..<render.numberOfPages{
-            UIGraphicsBeginPDFPage()
-            render .drawPage(at: i, in: UIGraphicsGetPDFContextBounds())
+        if result {
+            print("convert success")
+            
+            docVc.url = NSURL.fileURL(withPath: fileName + ".pdf")
+            docVc.presentPreview(animated: true)
         }
         
-        UIGraphicsEndPDFContext()
-        
-        return pdfData
     }
-
+    
+    func documentInteractionControllerViewControllerForPreview(_ controller: UIDocumentInteractionController) -> UIViewController {
+        return self
+    }
+    
+    func documentInteractionControllerRectForPreview(_ controller: UIDocumentInteractionController) -> CGRect {
+        return self.view.frame
+    }
+    
+    func documentInteractionControllerViewForPreview(_ controller: UIDocumentInteractionController) -> UIView? {
+        return self.view
+    }
+    
+    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+        webView.stringByEvaluatingJavaScript(from: "document.body.innerText='fail load'")
+    }
+    
+   
 }
