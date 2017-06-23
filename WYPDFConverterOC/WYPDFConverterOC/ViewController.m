@@ -33,8 +33,8 @@ static NSString *const cellID = @"cellID";
 
 - (void)getData{
     
-    _files = @[@"多张图片转PDF",@"抵押贷款",@"大话Swift 3.0（上）",@"华为推荐书目",@"Xcode快捷键",@"Page",@"iOS",@"H5,JS资源",@"excel操作大全"];
-    _type = @[@"image",@"numbers",@"key",@"xls",@"rtf",@"pages",@"ppt",@"txt",@"doc"];
+    _files = @[@"多张图片转PDF",@"抵押贷款",@"大话Swift 3.0（上）",@"华为推荐书目",@"Xcode快捷键",@"Page",@"iOS",@"H5,JS资源",@"excel操作大全",@"虎扑篮球"];
+    _type = @[@"image",@"numbers",@"key",@"xls",@"rtf",@"pages",@"ppt",@"txt",@"doc",@"webarchive"];
 }
 
 #pragma mark -- UITableViewDelegate

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "UIWebView+WYFile.h"
+
 @interface WYPDFConverter : NSObject
 
 /**
@@ -26,6 +28,11 @@ image to PDF
 + (BOOL)convertPDFWithWebView:(UIWebView *)webView fileName:(NSString *)fileName;
 
 
+/**
+ 文件保存地址
+ 
+ @param fileName 文件名
+ */
 + (NSString *)saveDirectory:(NSString *)fileName;
 
 
