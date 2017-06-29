@@ -11,12 +11,18 @@ import UIKit
 class WYPDFConverter: NSObject {
     
    class func convertPDFWithImages(images : Array<UIImage>,fileName : String) -> Bool {
+    
+    if images.count == 0 {
+        return false;
+    }
+    
+    
         return true
     }
     
    class func converterPDFWithWebView(_ webView : UIWebView, fileName : String) -> Bool {
         let pdfPath = self.saveDirectory(fileName : fileName)
-        print("/******************文件类型****************/\n"+pdfPath+"\n/************************************/");
+        print("/******************文件类型****************/\n\(pdfPath)\n/************************************/");
         
         let pdfData = self.convert2PDFData(webView: webView)
         
@@ -55,6 +61,11 @@ class WYPDFConverter: NSObject {
         return pdfData
     }
 
+    func pdfSaveFolder() -> String {
+        let path = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).last!
+        
+        return 
+    }
     
    class func saveDirectory(fileName:String) -> String {
        
@@ -64,3 +75,5 @@ class WYPDFConverter: NSObject {
         return url.path + "/" + fileName
     }
 }
+
+

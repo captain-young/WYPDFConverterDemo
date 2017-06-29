@@ -17,11 +17,14 @@
 
 @property (strong, nonatomic) UIWebView *webView;
 @property (strong, nonatomic) UIDocumentInteractionController *docVC;
+@property (strong, nonatomic) UIActivityIndicatorView *indictorView;
+@property (strong, nonatomic) UIButton *imageConverterBtn;
 
 @end
 
 @implementation WYWebViewController
 
+#pragma mark -- lazy loading UI
 - (UIWebView *)webView{
     if (!_webView) {
         _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, WY_SCREEN_WIDTH, WY_SCREEN_HEIGHT - 50)];
@@ -29,6 +32,29 @@
         _webView.scalesPageToFit = YES;
         [self.view addSubview:_webView];
     }return _webView;
+}
+
+- (UIActivityIndicatorView *)indictorView{
+    if (!_indictorView) {
+        _indictorView = [[UIActivityIndicatorView alloc] init];
+        _indictorView.center = self.view.center;
+        _indictorView.bounds = CGRectMake(0, 0, 50, 50);
+        _indictorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
+        [self.view addSubview:_indictorView];
+    }return _indictorView;
+}
+
+- (UIButton *)imageConverterBtn{
+    if (!_imageConverterBtn) {
+        _imageConverterBtn = ({
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(20, CGRectGetMaxY(self.webView.frame) + 10, WY_SCREEN_WIDTH - 40 , 30);
+            [button setTitle:@"Image转换" forState:UIControlStateNormal];
+            button.backgroundColor = [UIColor orangeColor];
+            [self.view addSubview:button];
+            button;
+        });
+    }return _imageConverterBtn;
 }
 
 - (UIDocumentInteractionController *)docVC{
@@ -53,40 +79,44 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:fileUrl];
     [self.webView loadRequest:request];
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(20, CGRectGetMaxY(self.webView.frame) + 10, WY_SCREEN_WIDTH - 40 , 30);
-    [button setTitle:@"Image转换" forState:UIControlStateNormal];
-    button.backgroundColor = [UIColor orangeColor];
-    [button addTarget:self action:@selector(convert2Image) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
+    [self.indictorView startAnimating];
+
+    
+    [self.imageConverterBtn addTarget:self action:@selector(convert2Image) forControlEvents:UIControlEventTouchUpInside];
+
     
     
 }
 
+
+/**
+ 转换成图片
+ */
 - (void)convert2Image{
+    self.indictorView.hidden = NO;
+    [self.indictorView startAnimating];
     
     UIImage *image = [self.webView convert2Image];
     NSData *imageData = UIImagePNGRepresentation(image);
-    NSString *documentPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
-    NSString *imagePath = [documentPath stringByAppendingPathComponent:@"temp.png"];
+    NSString *imagePath = [WYPDFConverter saveDirectory:[NSString stringWithFormat:@"%@_IMG.png",self.fileName]];
     BOOL result = [imageData writeToFile:imagePath atomically:YES];
+   
     if (result) {
         self.docVC.URL = [NSURL fileURLWithPath:imagePath];
         [self.docVC presentPreviewAnimated:YES];
+        
+        [self.indictorView stopAnimating];
     }
-
-//    UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
 }
-//- (void)image: (UIImage *) image didFinishSavingWithError: (NSError *) error contextInfo: (void *) contextInfo{
-//    if (error || !image) {
-//        NSLog(@"保存失败");
-//    }else{
-//        NSLog(@"保存成功");
-//    }
-//}
 
-
+/**
+ 转换成PDF格式文件
+ */
 - (void)convertPDFAction{
+    
+    self.indictorView.hidden = NO;
+    [self.indictorView startAnimating];
+    
     NSString *fileName = [NSString stringWithFormat:@"%@.pdf",_fileName];
     BOOL result = [WYPDFConverter convertPDFWithWebView:self.webView fileName:fileName];
     
@@ -96,9 +126,10 @@
         
         self.docVC.URL = [NSURL fileURLWithPath:[WYPDFConverter saveDirectory:fileName]];
         [self.docVC presentPreviewAnimated:YES];
+        [self.indictorView stopAnimating];
+
     }
 }
-
 
 #pragma mark - UIDocumentInteractionControllerDelegate Methods
 - (UIViewController *)documentInteractionControllerViewControllerForPreview:(UIDocumentInteractionController *)controller{
@@ -107,6 +138,10 @@
 
 
 #pragma mark - UIWebViewDelegate
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    [self.indictorView stopAnimating];
+}
 
 //- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
 //    [webView stringByEvaluatingJavaScriptFromString:@"document.body.innerText='fail load'"];

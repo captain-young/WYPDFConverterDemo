@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1823B7661F04A98B0077487A /* WYFilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1823B7651F04A98B0077487A /* WYFilesViewController.m */; };
 		1834C87A1EF9043F0092518D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1834C8791EF9043F0092518D /* main.m */; };
 		1834C87D1EF9043F0092518D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1834C87C1EF9043F0092518D /* AppDelegate.m */; };
 		1834C8801EF9043F0092518D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1834C87F1EF9043F0092518D /* ViewController.m */; };
@@ -59,6 +60,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1823B7641F04A98B0077487A /* WYFilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYFilesViewController.h; sourceTree = "<group>"; };
+		1823B7651F04A98B0077487A /* WYFilesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYFilesViewController.m; sourceTree = "<group>"; };
 		1834C8751EF9043F0092518D /* WYPDFConverterOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYPDFConverterOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1834C8791EF9043F0092518D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1834C87B1EF9043F0092518D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -267,6 +270,8 @@
 				1834C9381EF936DB0092518D /* WYImageViewController.m */,
 				1834C9391EF936DB0092518D /* WYWebViewController.h */,
 				1834C93A1EF936DB0092518D /* WYWebViewController.m */,
+				1823B7641F04A98B0077487A /* WYFilesViewController.h */,
+				1823B7651F04A98B0077487A /* WYFilesViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -434,6 +439,7 @@
 			files = (
 				1834C93E1EF936DB0092518D /* UIViewController+ImagePicker.m in Sources */,
 				1834C8801EF9043F0092518D /* ViewController.m in Sources */,
+				1823B7661F04A98B0077487A /* WYFilesViewController.m in Sources */,
 				1834C87D1EF9043F0092518D /* AppDelegate.m in Sources */,
 				1834C9291EF919E60092518D /* UIWebView+WYFile.m in Sources */,
 				1834C93F1EF936DB0092518D /* WYImageViewController.m in Sources */,

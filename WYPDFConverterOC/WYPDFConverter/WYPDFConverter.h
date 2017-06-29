@@ -29,6 +29,11 @@ image to PDF
 
 
 /**
+ 文件夹目录
+ */
++ (NSString *)pdfSaveFolder;
+
+/**
  文件保存地址
  
  @param fileName 文件名

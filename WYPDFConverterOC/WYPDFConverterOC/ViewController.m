@@ -7,20 +7,37 @@
 //
 
 #import "ViewController.h"
-#import "WYWebViewController.h"
 #import "WYImageViewController.h"
-@interface ViewController ()
+#import <QuickLook/QuickLook.h>
+#import "WYPDFConverter.h"
+@interface ViewController ()<QLPreviewControllerDataSource>
+
+@property (nonatomic, strong) QLPreviewController *qlVc;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (strong, nonatomic) NSArray *files;
-@property (strong, nonatomic) NSArray *type;
+@property (strong, nonatomic) NSArray *kinds;
+
+@property (strong, nonatomic) NSMutableArray *filesArr; 
 
 @end
 
 static NSString *const cellID = @"cellID";
 
 @implementation ViewController
+
+- (NSMutableArray *)filesArr{
+    if (!_filesArr) {
+        _filesArr = [NSMutableArray array];
+    }return _filesArr;
+}
+
+- (QLPreviewController *)qlVc{
+    if (!_qlVc) {
+        _qlVc = [[QLPreviewController alloc] init];
+        _qlVc.dataSource = self;
+    }return _qlVc;
+}
 
 - (void)viewDidLoad {
     
@@ -33,36 +50,77 @@ static NSString *const cellID = @"cellID";
 
 - (void)getData{
     
-    _files = @[@"多张图片转PDF",@"抵押贷款",@"大话Swift 3.0（上）",@"华为推荐书目",@"Xcode快捷键",@"Page",@"iOS",@"H5,JS资源",@"excel操作大全",@"虎扑篮球"];
-    _type = @[@"image",@"numbers",@"key",@"xls",@"rtf",@"pages",@"ppt",@"txt",@"doc",@"webarchive"];
+    [self.filesArr removeAllObjects];
+   
+    _kinds = @[@"图片转PDF",@"各种格式文档转PDF(webView2PDF、image)",@"格式转换后的文件"];
+    
+    NSFileManager *fm = [NSFileManager defaultManager];
+    
+    NSString *file ; // 文件名
+
+    NSDirectoryEnumerator *enumer = [fm enumeratorAtPath:[WYPDFConverter pdfSaveFolder]];
+    
+    while (file = [enumer nextObject]) {
+        // 添加PDF和图片文件
+        if ([file.pathExtension isEqualToString:@"pdf"] || [file.pathExtension isEqualToString:@"png"]) {
+            [self.filesArr addObject:file];
+        }
+    }
+    
 }
 
 #pragma mark -- UITableViewDelegate
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return _kinds.count;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _files.count;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@.%@",_files[indexPath.row],_type[indexPath.row]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@",_kinds[indexPath.section]];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (indexPath.row == 0){
+    
+    // 三种不同页面跳转的方法
+    if (indexPath.section == 0){
+        
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
         WYImageViewController *imageVc = [sb instantiateViewControllerWithIdentifier:@"imageVC"];
         [self.navigationController pushViewController:imageVc animated:YES];
         
-    }else{
-        WYWebViewController *webVc = [[WYWebViewController alloc] init];
-        webVc.filePath = [[NSBundle mainBundle] pathForResource:_files[indexPath.row] ofType:_type[indexPath.row]];
-        webVc.fileName = _files[indexPath.row];
-        [self.navigationController pushViewController:webVc animated:YES];
+    }else if(indexPath.section == 1){
+       
+        [self performSegueWithIdentifier:@"FileVCSegue" sender:self];
+        
+    }else if (indexPath.section == 2){
+        // 更新数据
+        [self getData];
+        [self.qlVc reloadData];
+        [self.navigationController pushViewController:self.qlVc animated:YES];
     }
+}
+
+#pragma mark QLPreviewControllerDataSource
+//返回文件的个数
+- (NSInteger)numberOfPreviewItemsInPreviewController:(QLPreviewController *)controller{
+    return self.filesArr.count;
+}
+
+//加载需要显示的文件
+- (id<QLPreviewItem>)previewController:(QLPreviewController *)controller previewItemAtIndex:(NSInteger)index{
+    
+    NSString *filePath = [WYPDFConverter saveDirectory:self.filesArr[index]];
+    
+    return [NSURL fileURLWithPath:filePath];
 }
 
 @end
