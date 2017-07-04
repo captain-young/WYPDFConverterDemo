@@ -61,10 +61,17 @@ class WYPDFConverter: NSObject {
         return pdfData
     }
 
-    func pdfSaveFolder() -> String {
+    fileprivate class func pdfSaveFolder() -> String {
         let path = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).last!
-        
-        return 
+        return "\(path)/WYPDF"
+    }
+    
+    fileprivate class func creatPDFFolder() -> Void{
+        let fileManager = FileManager.default
+        if !fileManager.fileExists(atPath: self.pdfSaveFolder()) {
+            _ = try! fileManager.createDirectory(atPath: self.pdfSaveFolder(), withIntermediateDirectories: true, attributes: nil)
+           
+        }
     }
     
    class func saveDirectory(fileName:String) -> String {

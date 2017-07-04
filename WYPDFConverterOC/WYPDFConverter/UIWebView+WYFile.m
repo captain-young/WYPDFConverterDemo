@@ -54,7 +54,8 @@
     /*
      将 UIWebView 分屏截取，然后将截取的图片拼接成一张图片
      将 UIWebView 从头，contentOffset = (0, 0)，开始截取webView.bounds.size.height高度的图片，
-     然后将 _webView 可见区域下移继续截屏，这样将所有截取的图片按照顺序拼接，就能得到整个 UIWebView 显示内容的完整图片。
+
+     
      */
     CGSize boundsSize = self.bounds.size;
     CGFloat boundsWidth = self.bounds.size.width;
@@ -90,7 +91,7 @@
     
     [images enumerateObjectsUsingBlock:^(UIImage *image, NSUInteger idx, BOOL *stop) {
         [image drawInRect:CGRectMake(0, boundsHeight * idx, boundsWidth, boundsHeight)];
-    }];
+    }];  
     
     UIImage *fullImage = UIGraphicsGetImageFromCurrentImageContext();
     
